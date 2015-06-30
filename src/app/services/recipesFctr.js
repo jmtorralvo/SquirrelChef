@@ -10,7 +10,7 @@ class RecipesFctr {
 
     lookForRecipe(ingSelected) {
         let count = 0,
-            tempArray = [],
+            tempArray = [], 
             limitPercentToMatch = this.limitPercentToMatch;
 
         _.forEach(this.recipes, function(obj, j) {
