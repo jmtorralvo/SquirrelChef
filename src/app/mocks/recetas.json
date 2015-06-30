@@ -1,0 +1,134 @@
+{
+    "recipes": [{
+        "name": "Sardina Foo",
+        "utils": "",
+        "ingredients": [{
+            "label": "sardina",
+            "importance": 10
+        }, {
+            "label": "ajo",
+            "importance": 3
+        }],
+        "ingredientsdetail": ["1/2 kilo de boquerones muy frescos", "1-2 dientes de ajo", "1 manojo de perejil", "Vinagre de vino blanco o de manzana de buena calidad", "Aceite de oliva virgen extra", "Sal"],
+        "preparation": ["Quitar la espina, la cabeza y las tripas a los boquerones (se puede pedir que lo hagan en la pescadería). Lavarlos y dejarlos 15 minutos en agua muy fría (se pueden poner unos cubitos de hielo) para que se desangren.",
+            "Ir pasándolos a un recipiente, poniendo entre cada capa un poco de sal y bañándolos con una mezcla de un 80% de vinagre por un 20% de agua, aproximadamente. Dejarlo unas 8 horas, como mucho 10. Si los boquerones son grandes, un par de horas más. Si hay de tamaños muy diferentes, separarlos en dos recipientes o quedarán muy secos los pequeños o crudos los grandes.",
+            "Escurrir bien, picar ajo en trozos no muy pequeños (así se pueden retirar) y perejil al gusto y volver a hacer las capas pero esta vez bañándolos con aceite. Dejarlos reposando en la nevera un mínimo de 24 horas. Servir con un poco de sal en escama encima, unas aceitunas, pan con tomate o patatas fritas para acompañar."
+        ]
+    }, {
+        "name": "Boquerones en vinagre",
+        "utils": "",
+        "ingredients": [{
+            "label": "boquerón",
+            "importance": 10
+        }, {
+            "label": "ajo",
+            "importance": 3
+        }, {
+            "label": "perejil",
+            "importance": 2
+        }, {
+            "label": "vinagre",
+            "importance": 4
+        }],
+        "ingredientsdetail": ["1/2 kilo de boquerones muy frescos", "1-2 dientes de ajo", "1 manojo de perejil", "Vinagre de vino blanco o de manzana de buena calidad", "Aceite de oliva virgen extra", "Sal"],
+        "preparation": ["Quitar la espina, la cabeza y las tripas a los boquerones (se puede pedir que lo hagan en la pescadería). Lavarlos y dejarlos 15 minutos en agua muy fría (se pueden poner unos cubitos de hielo) para que se desangren.",
+            "Ir pasándolos a un recipiente, poniendo entre cada capa un poco de sal y bañándolos con una mezcla de un 80% de vinagre por un 20% de agua, aproximadamente. Dejarlo unas 8 horas, como mucho 10. Si los boquerones son grandes, un par de horas más. Si hay de tamaños muy diferentes, separarlos en dos recipientes o quedarán muy secos los pequeños o crudos los grandes.",
+            "Escurrir bien, picar ajo en trozos no muy pequeños (así se pueden retirar) y perejil al gusto y volver a hacer las capas pero esta vez bañándolos con aceite. Dejarlos reposando en la nevera un mínimo de 24 horas. Servir con un poco de sal en escama encima, unas aceitunas, pan con tomate o patatas fritas para acompañar."
+        ]
+    }, {
+        "name": "Cangrejos de la abuela",
+        "utils": "",
+        "ingredients": [{
+            "label": "cangrejo río",
+            "importance": 10
+        }, {
+            "label": "pimiento rojo",
+            "importance": 2
+        }, {
+            "label": "pimiento verde",
+            "importance": 2
+        }, {
+            "label": "cayena",
+            "importance": 2
+        }, {
+            "label": "laurel",
+            "importance": 2
+        }, {
+            "label": "vino blanco",
+            "importance": 2
+        }, {
+            "label": "pimentón",
+            "importance": 2
+        }],
+        "ingredientsdetail": ["1 kilo de cangrejos de rio", "1 pimiento rojo grande", "1 pimiento verde grande", "cayena", "laurel", "vino blanco", "pimentón"],
+        "preparation": ["Limpiar los cangrejos con mucho agua.",
+            "Sofreír los pimientos cortados en dados, añadir los cangrejos vivos y no parar de remover. ",
+            "Salar, añadir la cayena, el laurel y el vino blanco, remover."
+        ]
+    }, {
+        "name": "Cazón en Adobo",
+        "utils": "",
+        "ingredients": [{
+            "label": "cazón",
+            "importance": 10
+        }, {
+            "label": "ajo",
+            "importance": 2
+        }, {
+            "label": "pimentón dulce",
+            "importance": 2
+        }, {
+            "label": "orégano",
+            "importance": 2
+        }, {
+            "label": "laurel",
+            "importance": 2
+        }, {
+            "label": "comino",
+            "importance": 2
+        }, {
+            "label": "vinagre",
+            "importance": 2
+        }, {
+            "label": "harina",
+            "importance": 3
+        }],
+        "ingredientsdetail": ["1/2 kilo de cazón en una rodaja gruesa", "4 hojas de laurel", "5 dientes de ajo", "una cucharada de pimentón dulce", "una cucharada de orégano fresco", "una cucharadita de comino molido", "un vaso de vinagre blanco", "un vaso de agua", "un buen puñado de sal", "Harina especial para fritura de pescado"],
+        "preparation": ["Para preparar el adobo, tenemos que cortar la rodaja de cazón en tacos de tamaño bocado, aprovechando para limpiarla de telillas y partes feas que pueda tener.",
+            "Colocamos los trozos de cazón en un recipiente profundo y añadimos un buen puñado de sal, 4 ó 5 ajos con su piel, previamente golpeados, 4 hojas de laurel partidas en dos, el pimentón, el comino y una cucharada de orégano fresco o seco.",
+            "Cubrimos las tajadas con un vaso de vinagre blanco, y completamos con otro vaso de agua, de forma que todo el pescado quede cubierto. Tapamos con un papel aluminio o con la tapa de una cacerola, y dejamos que repose dentro de la nevera durante al menos 8 horas. También se puede hacer de víspera, sin miedo, que no quedará demasiado fuerte.",
+            "Una vez preparado el adobo, sacamos las tajadas de cazón, y las escurrimos bien en papel absorbente. Pasamos por harina, mejor si utilizamos una especial para frituras de pescado, y freímos en aceite de oliva virgen extra bien caliente, para que se doren por fuera y queden jugosos por dentro."
+        ]
+    }, {
+        "name": "Ceviche de Lubina",
+        "utils": "",
+        "ingredients": [{
+            "label": "lubina",
+            "importance": 10
+        }, {
+            "label": "pulpo",
+            "importance": 3
+        }, {
+            "label": "cebolleta",
+            "importance": 4
+        }, {
+            "label": "cebolla roja",
+            "importance": 2
+        }, {
+            "label": "tomate",
+            "importance": 3
+        }, {
+            "label": "lima",
+            "importance": 2
+        }, {
+            "label": "cilantro",
+            "importance": 3
+        }],
+        "ingredientsdetail": ["600 g de lomos de lubina limpios de piel y espinas", "200 g de pulpo cocido", "1 tomate", "1 cebolleta, cebolla roja", "2 limas", "2 cucharaditas de cilantro", "sal"],
+        "preparation": ["Cortar la cebolla tierna y ponerla a macerar unos 20 minutos con el zumo de medio limón y un chorro de agua para que pierda fuerza.",
+            "Mientras, cortar la lubina y el pulpo en láminas finas.",
+            "Justo antes de servir, juntar la lubina, el pulpo, el tomate, la cebolla escurrida y el zumo del otro limón. Dejar reposar un minuto. salar",
+            "Servir inmediatamente decorado con el cilantro."
+        ]
+    }]
+}

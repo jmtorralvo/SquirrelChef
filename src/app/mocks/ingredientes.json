@@ -1,0 +1,184 @@
+{
+	"ingredients" : [
+		{
+			"name" : "sardina",
+			"type" : "fish",
+			"importance"	:	1,
+			"icon"	:	"fishIco"
+		},
+		{
+			"name" : "dorada",
+			"type" : "fish",
+			"importance"	:	1,
+			"icon"	:	"fishIco"
+		},
+		{
+			"name" : "lubina",
+			"type" : "fish",
+			"importance"	:	1,
+			"icon"	:	"fishIco"
+		},
+		{
+			"name" : "boquerón",
+			"type" : "fish",
+			"importance"	:	1,
+			"icon"	:	"fishIco"
+		},
+		{
+			"name" : "salmón",
+			"type" : "fish",
+			"importance"	:	1,
+			"icon"	:	"fishIco"
+		},
+		{
+			"name" : "pulpo",
+			"type" : "fish",
+			"importance"	:	1,
+			"icon"	:	"fishIco"
+		},
+		{
+			"name" : "cebolla",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "cebolla roja",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "cebolleta",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "pimiento verde",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "pimiento rojo",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "calabacín",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "pepino",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "tomate",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "espinacas",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "lechuga",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "rúcula",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "zanahoria",
+			"type" : "vegetable",
+			"importance"	:	3,
+			"icon"	:	"vegIco"
+		},
+		{
+			"name" : "arroz",
+			"type" : "main",
+			"importance"	:	1,
+			"icon"	:	"grainIco"
+		},
+		{
+			"name" : "maiz",
+			"type" : "main",
+			"importance"	:	1,
+			"icon"	:	"grainIco"
+		},
+		{
+			"name" : "pera",
+			"type" : "fruit",
+			"importance"	:	2,
+			"icon"	:	"fruitIco"
+		},
+		{
+			"name" : "plátano",
+			"type" : "fruit",
+			"importance"	:	4,
+			"icon"	:	"fruitIco"
+		},
+		{
+			"name" : "lima",
+			"type" : "fruit",
+			"importance"	:	4,
+			"icon"	:	"fruitIco"
+		},
+		{
+			"name" : "limón",
+			"type" : "fruit",
+			"importance"	:	4,
+			"icon"	:	"fruitIco"
+		},
+		{
+			"name" : "naranja",
+			"type" : "fruit",
+			"importance"	:	4,
+			"icon"	:	"fruitIco"
+		},
+		{
+			"name" : "aguacate",
+			"type" : "fruit",
+			"importance"	:	4,
+			"icon"	:	"fruitIco"
+		},
+		{
+			"name" : "naranja",
+			"type" : "fruit",
+			"importance"	:	2,
+			"icon"	:	"fruitIco"
+		},
+		{
+			"name" : "aceite",
+			"type" : "sauce",
+			"importance"	:	4,
+			"icon"	:	"sauceIco"
+		},
+		{
+			"name" : "vinagre",
+			"type" : "sauce",
+			"importance"	:	4,
+			"icon"	:	"sauceIco"
+		},
+		{
+			"name" : "huevo",
+			"type" : "main",
+			"importance"	:	2,
+			"icon"	:	"eggIco"
+		}
+	]
+}

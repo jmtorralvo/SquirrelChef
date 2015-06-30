@@ -1,0 +1,20 @@
+@import 'helpers/mixins';
+@import "helpers/vars";
+
+html, body{ 
+
+}
+
+
+.low{
+		color: red;
+	}
+	.medium{
+		color: yellow;
+	}
+	.hight{
+		color: blue;
+	}
+	.total{
+		color: green;
+	}

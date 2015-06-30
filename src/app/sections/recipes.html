@@ -1,0 +1,32 @@
+<h1>RECIPES</h1>
+<div class="row">
+    <div class="col-xs-12">
+        <form action="">
+            <label for="inputFilter">Nombre:</label>
+            <input id="inputFilter" type="text" ng-model="searchRecipe">
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div id="recipes-wrap">
+            <ul class="recipes-list">
+                <li class="recipe-detail" ng-repeat="rec in recipes | filter:searchRecipe">
+                    <h3 class="recipe-title">{{rec.name}}</h3>
+                    <h5>Ingredientes:</h5>
+                    <ul>
+                        <li ng-repeat="ing in rec.ingredientsdetail">
+                            {{ing}}
+                        </li>
+                    </ul>
+                    <h5>Pasos:</h5>
+                    <ul>
+                        <li ng-repeat="det in rec.preparation">
+                            {{det}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

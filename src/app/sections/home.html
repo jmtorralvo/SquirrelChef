@@ -1,0 +1,69 @@
+<h1>HOME</h1>
+<div class="row margin-bottom-xxl">
+    <div class="col-xs-12">
+        <h5>Posibles recipes:</h5>
+        <ul ng-if="posiblesRecipes.length > 0">
+            <li class="result-recipe" ng-repeat="rec in posiblesRecipes">
+                <div ng-class="rec.clase">
+                    <p>{{rec.name}} - {{rec.score}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row margin-bottom-lg">
+    <div class="col-xs-6">
+        <div class="row">
+            <div class="col-sm-6">
+                <form action="">
+                    <label for="inputFilter">Nombre:</label>
+                    <input id="inputFilter" type="text" ng-model="searchText">
+                </form>
+            </div>
+            <div class="col-xs-3">
+                <button ng-click="generateRecipe();">
+                    Generar Receta
+                </button>
+            </div>
+            <div class="col-xs-3">
+                <button ng-click="reset();">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <div class="row">
+            <h5 class="col-xs-12">Ingredients:</h5>
+            <ul class="col-xs-12">
+                <li class="ingredient-wrap ing-noSelected col-xs-4 no-padding margin-bottom-sm" ng-repeat="ing in ingredients | filter:searchText">
+                    <div class="ingredient" ng-class="{'selected': ing.selected}" ng-click="toggleAddingIngredient(ing)">
+                        <span ng-class="{{ing.icon}}"></span>
+                        <p class="ing-label ing-label-normal">{{ing.name}}</p>
+                        <p ng-if="!ing.selected" class="ing-label ing-label-hover">Añadir {{ing.name}}</p>
+                        <p ng-if="ing.selected" class="ing-label ing-label-hover">Eliminar {{ing.name}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="row">
+            <div class="col-xs-12">
+                <h5 class="col-xs-12">Selected:</h5>
+                <ul class="col-xs-12">
+                    <li class="ingredient-wrap ing-selected hvr-bounce-to-right col-xs-4 no-padding margin-bottom-sm" ng-repeat="ing in selectedIngredients">
+                        <div class="ingredient ingredient-selected" ng-click="toggleAddingIngredient(ing)">
+                            <span ng-class="{{ing.icon}}"></span>
+                            <p class="ing-label ing-label-normal">{{ing.name}}</p>
+                            <p ng-if="!ing.selected" class="ing-label ing-label-hover">Añadir {{ing.name}}</p>
+                            <p ng-if="ing.selected" class="ing-label ing-label-hover">Eliminar {{ing.name}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
