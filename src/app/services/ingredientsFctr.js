@@ -5,6 +5,7 @@ class IngredientsFctr {
     constructor() {
         this.ingredients = [];
         this.recipes = [];
+        this.ingredientsSelected = [];
     };
 
     fillIngredients(array) {
@@ -29,7 +30,23 @@ class IngredientsFctr {
 
     getAllRecipes() {
         return this.recipes;
-    }
+    };
+
+    deleteIngredientsFromSelectedArray(){
+        this.ingredientsSelected = [];
+    };
+
+    addIngredientToSelectedArray(ingredient){
+        this.ingredientsSelected.push(ingredient);
+    };
+
+    updateSelectedIngredientsArray(array){
+        this.ingredientsSelected = array;
+    };
+
+    getIngredientsSelected(){
+        return this.ingredientsSelected;
+    };
 
     getIngredient(name) {
         _.findIndex(this.ingredients, function(ing) {

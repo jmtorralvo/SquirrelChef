@@ -10,7 +10,7 @@ import IngredientsFctr from '../app/services/ingredientsFctr';
 import RecipesFctr from '../app/services/recipesFctr';
 
 
-angular.module('squirrelChef', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap'])
+angular.module('squirrelChef', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'firebase'])
     .controller('MainCtrl', MainCtrl)
     .controller('NavbarCtrl', NavbarCtrl)
     .controller('HomeCtrl', HomeCtrl)

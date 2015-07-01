@@ -7,17 +7,17 @@ class HomeCtrl {
 
         $scope.ingredients = IngredientsFctr.getAllIngredients();
         $scope.recipes = RecipesFctr.getAllRecipes();
-
         $scope.posiblesRecipes = [];
+        $scope.selectedIngredients = IngredientsFctr.getIngredientsSelected();
 
 
-        $scope.toggleAddingIngredient = function(item) {    
+        $scope.toggleAddingIngredient = function(item) {
             item.selected = (item.selected === true) ? false : true;
             if (item.selected === true) {
                 $scope.selectedIngredients.push(item);
             } else {
                 var deltedItems = _.remove($scope.selectedIngredients, function(el) {
-                    return el.id === item.id;
+                    return el.name === item.name;
                 });
             }
         };
@@ -34,6 +34,11 @@ class HomeCtrl {
                 $scope.ingredients[i].selected = false;
             };
         };
+
+        $scope.$on('$destroy', function() {
+            console.log('destroy');
+            IngredientsFctr.updateSelectedIngredientsArray($scope.selectedIngredients);
+        });
     }
 }
 
