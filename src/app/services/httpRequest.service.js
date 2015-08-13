@@ -9,7 +9,7 @@ class HttpRequest {
             url: '',
             params: {},
             baseUrl: '',
-            timeout: null
+            timeout: null 
         };
   	}
 

@@ -13,13 +13,11 @@ module.exports = function(options) {
       '!' + options.tmp + '/serve/app/vendor.css'
     ], { read: false });
 
-
     var injectScripts = gulp.src([
       options.tmp + '/serve/app/**/*.js',
       '!' + options.src + '/app/**/*.spec.js',
       '!' + options.src + '/app/**/*.mock.js'
     ], { read: false });
-
 
     var injectOptions = {
       ignorePath: [options.src, options.tmp + '/serve'],

@@ -11,7 +11,8 @@
     <div class="col-xs-12">
         <div id="recipes-wrap">
             <ul class="recipes-list">
-                <li class="recipe-detail" ng-repeat="rec in recipes | filter:searchRecipe">
+            
+                <li class="recipe-detail" ng-repeat="rec in recipesCtrl.recipes | filter: { name: searchRecipe }">
                     <h3 class="recipe-title">{{rec.name}}</h3>
                     <h5>Ingredientes:</h5>
                     <ul>

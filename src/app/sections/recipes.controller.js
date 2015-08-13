@@ -1,8 +1,12 @@
 'use strict';
 
 class RecipesCtrl {
+
   constructor ($scope, RecipesFctr) {
-      $scope.recipes = RecipesFctr.getAllRecipes();
+
+  	  var vm = this;  
+
+      vm.recipes = RecipesFctr.getAllRecipes();
       $scope.searchRecipe;
   }
 }

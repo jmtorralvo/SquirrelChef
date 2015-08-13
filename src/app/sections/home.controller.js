@@ -1,47 +1,68 @@
 'use strict';
 
 class HomeCtrl {
-    constructor($scope, IngredientsFctr, RecipesFctr) {
 
+    constructor($scope, IngredientsFctr, RecipesFctr, ConstantSrv) {
+
+        var vm = this;  
+ 
+        vm.toggleAddingIngredient = toggleAddingIngredient;
+        vm.generateRecipe = generateRecipe;
+        vm.resetAll = resetAll;
+        vm.setAlert = setAlert;
+
+        vm.ingredients = IngredientsFctr.getAllIngredients();
+        vm.recipes = RecipesFctr.getAllRecipes();
+        vm.posiblesRecipes = [];
+        vm.selectedIngredients = IngredientsFctr.getIngredientsSelected();
+        vm.alertModel = {
+            msg : '',
+            type : ''
+        };
         $scope.searchText;
 
-        $scope.ingredients = IngredientsFctr.getAllIngredients();
-        $scope.recipes = RecipesFctr.getAllRecipes();
-        $scope.posiblesRecipes = [];
-        $scope.selectedIngredients = IngredientsFctr.getIngredientsSelected();
 
-
-        $scope.toggleAddingIngredient = function(item) {
+        function toggleAddingIngredient(item) {
             item.selected = (item.selected === true) ? false : true;
             if (item.selected === true) {
-                $scope.selectedIngredients.push(item);
+                vm.selectedIngredients.push(item);
             } else {
-                var deltedItems = _.remove($scope.selectedIngredients, function(el) {
+                var deltedItems = _.remove(vm.selectedIngredients, function(el) {
                     return el.name === item.name;
                 });
             }
         };
 
-        $scope.generateRecipe = function() {
-            $scope.posiblesRecipes = RecipesFctr.lookForRecipe($scope.selectedIngredients);
+        function generateRecipe() {
+            vm.posiblesRecipes = RecipesFctr.lookForRecipe(vm.selectedIngredients); 
+            if (vm.posiblesRecipes.length === 0){
+                vm.setAlert(ConstantSrv.getConst('msg', 'noRecipes'), 'info')
+            } 
         };
 
-        $scope.reset = function() {
-            $scope.posiblesRecipes = [];
-            $scope.selectedIngredients = [];
+        function resetAll() {
+            vm.posiblesRecipes = [];
+            vm.selectedIngredients = [];
+            $scope.searchText = '';
 
-            for (var i = 0; i < $scope.ingredients.length; i++) {
-                $scope.ingredients[i].selected = false;
+            for (var i = 0; i < vm.ingredients.length; i++) {
+                vm.ingredients[i].selected = false;
+            };
+        };
+
+        function setAlert(txt, tipo){
+            vm.alertModel = {
+                msg : txt,
+                type : tipo
             };
         };
 
         $scope.$on('$destroy', function() {
-            console.log('destroy');
-            IngredientsFctr.updateSelectedIngredientsArray($scope.selectedIngredients);
+            IngredientsFctr.updateSelectedIngredientsArray(vm.selectedIngredients);
         });
     }
 }
 
-HomeCtrl.$inject = ['$scope', 'IngredientsFctr', 'RecipesFctr'];
+HomeCtrl.$inject = ['$scope', 'IngredientsFctr', 'RecipesFctr', 'ConstantSrv'];
 
 export default HomeCtrl;
