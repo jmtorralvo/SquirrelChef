@@ -13,8 +13,7 @@ class HomeCtrl {
 
         vm.ingredients = IngredientsFctr.getAllIngredients();
         vm.recipes = RecipesFctr.getAllRecipes();
-        //vm.posiblesRecipes = [];
-        /*vm.selectedIngredients =  [];*/
+        vm.posiblesRecipes = RecipesFctr.getMatchedRecipes();
         vm.selectedIngredients = IngredientsFctr.getIngredientsSelected();
         $scope.searchText;
 
@@ -47,9 +46,10 @@ class HomeCtrl {
         };
 
         function resetAll() {
-            vm.posiblesRecipes = [];
             vm.selectedIngredients = [];
             $scope.searchText = '';
+            RecipesFctr.deleteMatchedRecipes();
+            vm.posiblesRecipes = RecipesFctr.getMatchedRecipes();
 
             for (var i = 0; i < vm.ingredients.length; i++) {
                 vm.ingredients[i].selected = false;

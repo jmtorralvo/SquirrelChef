@@ -4,6 +4,7 @@ class RecipesFctr {
 
     constructor() {
         this.recipes = [];
+        this.matchedRecipes = [];
         // Percent of ingredients must have to match a recipe;
         this.limitPercentToMatch = 65;
     };
@@ -47,6 +48,7 @@ class RecipesFctr {
             }
             count = 0;
         });
+        this.fillMatchedRecipes(tempArray);
         return (tempArray);
     };
 
@@ -72,6 +74,17 @@ class RecipesFctr {
         });
     };
 
+    fillMatchedRecipes(array){
+        this.matchedRecipes = array;
+    };
+
+    getMatchedRecipes(){
+        return this.matchedRecipes;
+    };
+
+    deleteMatchedRecipes(){
+        this.matchedRecipes = [];
+    }
 
     changePercentToMatch(num) {
         if (num > 0 && num < 100) {

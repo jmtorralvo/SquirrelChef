@@ -44,11 +44,11 @@ angular.module('squirrelChef', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize
             controllerAs: 'homeCtrl'
         })
         .state('main.recipes', {
-            url: '/recipes',
+            url: '/recipes/:id',
             templateUrl: 'app/sections/recipes.html',
             controller: 'RecipesCtrl',
             controllerAs: 'recipesCtrl'
-        });
+        })
 
     $urlRouterProvider.otherwise('/');
 });

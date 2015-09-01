@@ -2,15 +2,15 @@
 
 class RecipesCtrl {
 
-  constructor ($scope, RecipesFctr) {
+    constructor($stateParams, $scope, RecipesFctr) {
 
-  	  var vm = this;  
+        var vm = this;
 
-      vm.recipes = RecipesFctr.getAllRecipes();
-      $scope.searchRecipe;
-  }
+        vm.recipes = RecipesFctr.getAllRecipes();
+        vm.searchRecipe = ($stateParams.id !== '') ? $stateParams.id : '';
+    }
 }
 
-RecipesCtrl.$inject = ['$scope', 'RecipesFctr'];
+RecipesCtrl.$inject = ['$stateParams', '$scope', 'RecipesFctr'];
 
 export default RecipesCtrl;

@@ -1,6 +1,7 @@
 {
     "recipes": [{
         "name": "Sardina Foo",
+        "id" : "0001",
         "utils": "",
         "ingredients": [{
             "label": "sardina",
@@ -16,6 +17,7 @@
         ]
     }, {
         "name": "Boquerones en vinagre",
+        "id" : "0002",
         "utils": "",
         "ingredients": [{
             "label": "boquerón",
@@ -37,6 +39,7 @@
         ]
     }, {
         "name": "Cangrejos de la abuela",
+        "id" : "0003",
         "utils": "",
         "ingredients": [{
             "label": "cangrejo río",
@@ -67,6 +70,7 @@
         ]
     }, {
         "name": "Cazón en Adobo",
+        "id" : "0004",
         "utils": "",
         "ingredients": [{
             "label": "cazón",
@@ -101,6 +105,7 @@
         ]
     }, {
         "name": "Ceviche de Lubina",
+        "id" : "0005",
         "utils": "",
         "ingredients": [{
             "label": "lubina",
