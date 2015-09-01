@@ -1,7 +1,7 @@
 'use strict';
 
 
-class ScAlert {
+class ScAlert { 
 
     constructor() {
         this.templateUrl = 'app/directives/sc-alert/scAlert.tpl.html'
@@ -16,7 +16,7 @@ class ScAlert {
     }
 
     link(scope, element, attrs) {
-       /* console.log('scope', scope);*/
+
     }
 }
 

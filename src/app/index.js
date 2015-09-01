@@ -9,12 +9,14 @@ import HttpRequest from '../app/services/httpRequest.service';
 import IngredientsFctr from '../app/services/ingredients.factory';
 import RecipesFctr from '../app/services/recipes.factory';
 import ScAlert from '../app/directives/sc-alert/scAlert.directive';
+import ScSearchBox from '../app/directives/sc-search-box/scSearchBox.directive';
 import ConstantSrv from '../app/services/constant.service';
 
 
 
 angular.module('squirrelChef.ui', [])
-    .directive('scAlert', () => new ScAlert()); //In case of directive wrote in ECMA6
+    .directive('scAlert', () => new ScAlert()) 
+    .directive('scSearchBox', () => new ScSearchBox());//In case of directive wrote in ECMA6
 
 
 angular.module('squirrelChef', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'firebase', 'squirrelChef.ui'])
@@ -44,7 +46,7 @@ angular.module('squirrelChef', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize
             controllerAs: 'homeCtrl'
         })
         .state('main.recipes', {
-            url: '/recipes/:id',
+            url: '/recipes/:nam',
             templateUrl: 'app/sections/recipes.html',
             controller: 'RecipesCtrl',
             controllerAs: 'recipesCtrl'

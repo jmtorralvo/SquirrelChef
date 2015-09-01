@@ -16,7 +16,9 @@ class MainCtrl {
             $state.go('main.home');
         }, function(error){
             // Show error
-        })
+        });
+
+        
     }
 }
 
