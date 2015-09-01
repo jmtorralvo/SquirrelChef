@@ -1,20 +1,30 @@
 @import 'helpers/mixins';
 @import "helpers/vars";
+html,
+body {}
 
-html, body{ 
-
+.result-recipe {
+	list-style: none;
+	
+    .tit-pos-recipe {
+        font-size: 18px;
+        cursor:pointer;
+        opacity: 0.75;
+        @include transition(opacity, 0.25s, ease-in-out); 
+    }
+    .tit-pos-recipe:hover {
+		opacity: 1;
+    }
+    .low {
+        color: red;
+    }
+    .medium {
+        color: yellow;
+    }
+    .hight {
+        color: blue;
+    }
+    .total {
+        color: green;
+    }
 }
-
-
-.low{
-		color: red;
-	}
-	.medium{
-		color: yellow;
-	}
-	.hight{
-		color: blue;
-	}
-	.total{
-		color: green;
-	}

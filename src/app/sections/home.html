@@ -5,7 +5,7 @@
         <div sc-Alert ng-model="homeCtrl.alertModel">sc-Alert</div>
         <ul ng-if="homeCtrl.posiblesRecipes.length > 0">
             <li class="result-recipe" ng-repeat="rec in homeCtrl.posiblesRecipes">
-                <div ng-class="rec.clase">
+                <div class="tit-pos-recipe col-xs-4" ng-class="rec.clase" tooltip="{{rec.tooltipTxt}}" tooltip-placement="bottom">
                     <p>{{rec.name}} - {{rec.score}}</p>
                 </div>
             </li>

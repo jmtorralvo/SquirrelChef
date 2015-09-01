@@ -2,6 +2,7 @@
 
 import MainCtrl from './main/main.controller';
 import NavbarCtrl from '../app/components/navbar/navbar.controller';
+import TooltipSqCtrl from '../app/components/tooltip/tooltipSq.controller';
 import HomeCtrl from '../app/sections/home.controller';
 import RecipesCtrl from '../app/sections/recipes.controller';
 import HttpRequest from '../app/services/httpRequest.service';
@@ -12,15 +13,16 @@ import ConstantSrv from '../app/services/constant.service';
 
 
 
-angular.module('squirrelChef.ui',[])
-   .directive('scAlert', () => new ScAlert());   //In case of directive wrote in ECMA6
+angular.module('squirrelChef.ui', [])
+    .directive('scAlert', () => new ScAlert()); //In case of directive wrote in ECMA6
 
 
-angular.module('squirrelChef', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'firebase', 'i18n', 'squirrelChef.ui'])
-    .controller('MainCtrl', MainCtrl) 
+angular.module('squirrelChef', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'firebase', 'squirrelChef.ui'])
+    .controller('MainCtrl', MainCtrl)
     .controller('NavbarCtrl', NavbarCtrl)
     .controller('HomeCtrl', HomeCtrl)
     .controller('RecipesCtrl', RecipesCtrl)
+    .controller('TooltipSqCtrl', TooltipSqCtrl)
     .service('HttpRequest', HttpRequest)
     .service('IngredientsFctr', IngredientsFctr)
     .service('RecipesFctr', RecipesFctr)

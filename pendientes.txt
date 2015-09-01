@@ -1,0 +1,3 @@
+i18n
+
+https://github.com/nolazybits/angular-i18n

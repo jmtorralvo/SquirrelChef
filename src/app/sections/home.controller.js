@@ -4,8 +4,8 @@ class HomeCtrl {
 
     constructor($scope, IngredientsFctr, RecipesFctr, ConstantSrv) {
 
-        var vm = this;  
- 
+        var vm = this;
+
         vm.toggleAddingIngredient = toggleAddingIngredient;
         vm.generateRecipe = generateRecipe;
         vm.resetAll = resetAll;
@@ -13,12 +13,9 @@ class HomeCtrl {
 
         vm.ingredients = IngredientsFctr.getAllIngredients();
         vm.recipes = RecipesFctr.getAllRecipes();
-        vm.posiblesRecipes = [];
+        //vm.posiblesRecipes = [];
+        /*vm.selectedIngredients =  [];*/
         vm.selectedIngredients = IngredientsFctr.getIngredientsSelected();
-        vm.alertModel = {
-            msg : '',
-            type : ''
-        };
         $scope.searchText;
 
 
@@ -34,10 +31,19 @@ class HomeCtrl {
         };
 
         function generateRecipe() {
-            vm.posiblesRecipes = RecipesFctr.lookForRecipe(vm.selectedIngredients); 
-            if (vm.posiblesRecipes.length === 0){
-                vm.setAlert(ConstantSrv.getConst('msg', 'noRecipes'), 'info')
-            } 
+            vm.posiblesRecipes = RecipesFctr.lookForRecipe(vm.selectedIngredients);
+            if (vm.posiblesRecipes.length === 0) {
+                vm.setAlert(ConstantSrv.getConst('msg', 'noRecipes'), 'info', true)
+            } else {
+                for (var i = 0; i < vm.posiblesRecipes.length; i++) {
+                    vm.posiblesRecipes[i].tooltipTxt = '';
+                    for (var j = 0; j < vm.posiblesRecipes[i].ingredients.length; j++) {
+                        let tempTxt = (j < vm.posiblesRecipes[i].ingredients.length - 1) ? vm.posiblesRecipes[i].ingredients[j].label + ', ' : vm.posiblesRecipes[i].ingredients[j].label + '.';
+                        vm.posiblesRecipes[i].tooltipTxt += tempTxt;
+                    };
+                };
+                vm.setAlert('', 'info', false)
+            }
         };
 
         function resetAll() {
@@ -50,14 +56,16 @@ class HomeCtrl {
             };
         };
 
-        function setAlert(txt, tipo){
+        function setAlert(txt, tipo, disp) {
             vm.alertModel = {
-                msg : txt,
-                type : tipo
+                msg: txt,
+                type: tipo,
+                display: disp
             };
         };
 
         $scope.$on('$destroy', function() {
+            //vm.resetAll();
             IngredientsFctr.updateSelectedIngredientsArray(vm.selectedIngredients);
         });
     }
