@@ -59,7 +59,7 @@ class HomeCtrl {
             for (var i = 0; i < vm.ingredients.length; i++) {
                 vm.ingredients[i].selected = false;
             };
-        };
+        }; 
 
         function setAlert(txt, tipo, disp) {
             vm.alertModel = {
