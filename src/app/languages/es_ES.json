@@ -1,0 +1,23 @@
+{
+    "commons": {
+        "NAME": "Nombre",
+        "RESET" : "Reset",
+        "INGREDIENTS" : "Ingredientes",
+        "ADD" : "Añadir",
+        "DELETE" : "Eliminar"
+    },
+    "nav": {
+        "HOME": "Home",
+        "RECIPES": "Recetas"
+    },
+    "home": {
+        "MATCHED_RECIPES": "recetas coincidentes",
+        "GEN_RECIPE" : "Generar Receta",
+        "RESET_SEARCH" : "Limpiar búsqueda",
+        "INGREDIENTS_SELECTED" : "Ingredientes seleccionados"
+    },
+    "recipes" : {
+    	"STEPS" : "Pasos",
+    	"RECIPES" : "Recetas"
+    }
+}

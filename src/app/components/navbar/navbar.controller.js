@@ -5,7 +5,6 @@ class NavbarCtrl {
     	var vm = this;
         $scope.$on('$locationChangeSuccess', function(next, current) {
             vm.sec = $state.current.name;
-            console.log(vm.sec); 
         });
     }
 }

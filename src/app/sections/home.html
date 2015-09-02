@@ -1,7 +1,7 @@
-<h1>HOME</h1>
+<h1>{{ 'nav.HOME' | translate }}</h1>
 <div class="row margin-bottom-xxl">
     <div class="col-xs-12">
-        <h5>Posibles recipes:</h5 : >
+        <h5>{{ 'home.MATCHED_RECIPES' | translate}}:</h5>
         <div sc-alert ng-model="homeCtrl.alertModel">sc-Alert</div>
         <ul ng-if="homeCtrl.posiblesRecipes.length > 0">
             <li class="result-recipe" ng-repeat="rec in homeCtrl.posiblesRecipes">
@@ -17,18 +17,18 @@
         <div class="row">
             <div class="col-sm-6">
                 <form action="">
-                    <label for="inputFilter">Nombre:</label>
+                    <label for="inputFilter">{{ 'commons.NAME' | translate }}:</label>
                     <input id="inputFilter" type="text" ng-model="searchText">
                 </form>
             </div>
             <div class="col-xs-3">
                 <button ng-click="homeCtrl.generateRecipe();">
-                    Generar Receta
+                    {{ 'home.GEN_RECIPE' | translate }}
                 </button>
             </div>
             <div class="col-xs-3">
                 <button ng-click="homeCtrl.resetAll();">
-                    Reset
+                    {{ 'home.RESET_SEARCH' | translate }}
                 </button>
             </div>
         </div>
@@ -37,14 +37,14 @@
 <div class="row">
     <div class="col-xs-6">
         <div class="row">
-            <h5 class="col-xs-12">Ingredients:</h5>
+            <h5 class="col-xs-12"> {{ 'commons.INGREDIENTS' | translate }}:</h5>
         <ul class="col-xs-12">
             <li class="ingredient-wrap ing-noSelected col-xs-4 no-padding margin-bottom-sm" ng-repeat="ing in homeCtrl.ingredients | filter:searchText">
                 <div class="ingredient" ng-class="{'selected': ing.selected}" ng-click="homeCtrl.toggleAddingIngredient(ing)">
                     <span ng-class="{{ing.icon}}"></span>
                     <p class="ing-label ing-label-normal">{{ing.name}}</p>
-                    <p ng-if="!ing.selected" class="ing-label ing-label-hover">Añadir {{ing.name}}</p>
-                    <p ng-if="ing.selected" class="ing-label ing-label-hover">Eliminar {{ing.name}}</p>
+                    <p ng-if="!ing.selected" class="ing-label ing-label-hover">{{ 'commons.ADD' | translate }} {{ing.name}}</p>
+                    <p ng-if="ing.selected" class="ing-label ing-label-hover">{{ 'commons.DELETE' | translate }} {{ing.name}}</p>
                 </div>
             </li>
         </ul>
@@ -53,14 +53,14 @@
 <div class="col-xs-6">
     <div class="row">
         <div class="col-xs-12">
-            <h5 class="col-xs-12">Selected:</h5>
+            <h5 class="col-xs-12">{{ 'home.INGREDIENTS_SELECTED' | translate }}:</h5>
             <ul class="col-xs-12">
                 <li class="ingredient-wrap ing-selected hvr-bounce-to-right col-xs-4 no-padding margin-bottom-sm" ng-repeat="ing in homeCtrl.selectedIngredients">
                     <div class="ingredient ingredient-selected" ng-click="homeCtrl.toggleAddingIngredient(ing)">
                         <span ng-class="{{ing.icon}}"></span>
                         <p class="ing-label ing-label-normal">{{ing.name}}</p>
-                        <p ng-if="!ing.selected" class="ing-label ing-label-hover">Añadir {{ing.name}}</p>
-                        <p ng-if="ing.selected" class="ing-label ing-label-hover">Eliminar {{ing.name}}</p>
+                        <p ng-if="!ing.selected" class="ing-label ing-label-hover">{{ 'commons.ADD' | translate }} {{ing.name}}</p>
+                        <p ng-if="ing.selected" class="ing-label ing-label-hover">{{ 'commons.DELETE' | translate }} {{ing.name}}</p>
                     </div>
                 </li>
             </ul>

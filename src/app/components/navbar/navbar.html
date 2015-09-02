@@ -3,10 +3,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
             <ul class="nav navbar-nav">
                 <li ng-class="navbarCtrl.sec==='main.home' ? 'active' : '' ">
-                  <a ui-sref="main.home">Home</a>
+                  <a ui-sref="main.home">{{ 'nav.HOME' | translate }}</a>
                 </li>
                 <li ng-class="navbarCtrl.sec==='main.recipes' ? 'active' : '' ">
-                  <a ui-sref="main.recipes">Recipes</a>
+                  <a ui-sref="main.recipes">{{ 'nav.RECIPES' | translate }}</a>
                 </li>
             </ul>
         </div>

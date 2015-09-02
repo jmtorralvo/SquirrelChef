@@ -1,7 +1,7 @@
 'use strict';
 
 class MainCtrl {
-    constructor($scope, HttpRequest, $state, IngredientsFctr, RecipesFctr, $q, $firebaseObject) {
+    constructor($scope, HttpRequest, $state, IngredientsFctr, RecipesFctr, $q, $firebaseObject, tmhDynamicLocale) {
 
         $scope.ref = new Firebase('https://scorching-torch-7081.firebaseio.com/squirrelChef');
         var syncObject = $firebaseObject($scope.ref);
@@ -18,10 +18,11 @@ class MainCtrl {
             // Show error
         });
 
-        
+        $scope.locale = 'es-es';
+        tmhDynamicLocale.set($scope.locale);
     }
 }
 
-MainCtrl.$inject = ['$scope', 'HttpRequest', '$state', 'IngredientsFctr', 'RecipesFctr', '$q', '$firebaseObject'];
+MainCtrl.$inject = ['$scope', 'HttpRequest', '$state', 'IngredientsFctr', 'RecipesFctr', '$q', '$firebaseObject', 'tmhDynamicLocale'];
 
 export default MainCtrl;
