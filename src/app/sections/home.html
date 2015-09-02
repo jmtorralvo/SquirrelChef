@@ -1,7 +1,7 @@
 <h1>{{ 'nav.HOME' | translate }}</h1>
 <div class="row margin-bottom-xxl">
-    <div class="col-xs-12">
-        <h5>{{ 'home.MATCHED_RECIPES' | translate}}:</h5>
+    <div class="col-xs-8">
+        <h4>{{ 'home.MATCHED_RECIPES' | translate}}:</h4>
         <div sc-alert ng-model="homeCtrl.alertModel">sc-Alert</div>
         <ul ng-if="homeCtrl.posiblesRecipes.length > 0">
             <li class="result-recipe" ng-repeat="rec in homeCtrl.posiblesRecipes">
@@ -10,6 +10,11 @@
                 </div>
             </li>
         </ul>
+    </div>
+    <div class="col-xs-4">
+        <h4>lslalasl</h4>
+        <input type="range" ng-model="time" min="100" max="2000" step="25" style="width: 140px" class="ng-valid ng-dirty">
+        <!-- <div range-slider min="0" max="10000" model-max="demo6.valueA" pin-handle="min"></div> -->
     </div>
 </div>
 <div class="row margin-bottom-lg">

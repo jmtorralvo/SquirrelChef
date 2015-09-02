@@ -48,7 +48,18 @@ angular.module('squirrelChef', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize
             url: '/home',
             templateUrl: 'app/sections/home.html',
             controller: 'HomeCtrl',
-            controllerAs: 'homeCtrl'
+            controllerAs: 'homeCtrl',
+            resolve : {
+                ingredients : function(IngredientsFctr){
+                    return IngredientsFctr.getAllIngredients();
+                },
+                posibleRecipes : function(RecipesFctr){
+                    return RecipesFctr.getMatchedRecipes();
+                },
+                recipes : function(RecipesFctr){
+                    return RecipesFctr.getAllRecipes();
+                }
+            }
         })
         .state('main.recipes', {
             url: '/recipes/:nam',

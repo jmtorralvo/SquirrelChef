@@ -26,6 +26,14 @@
                             {{det}}
                         </li>
                     </ul>
+                    <rating ng-model="rec.rating" max="recipesCtrl.maxRating"
+                            ng-click="recipesCtrl.changeRating($event, rec, recipesCtrl.overStar)" 
+                            on-hover="recipesCtrl.hoveringOver(value)" 
+                            on-leave="recipesCtrl.overStar = null" 
+                            readonly="recipesCtrl.ratingReadOnly"
+                            class="pointer"
+                            titles="['one','two','three']"></rating>
+                    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': recipesCtrl.percent>=30 && recipesCtrl.percent<70, 'label-success': recipesCtrl.percent>=70}" >{{recipesCtrl.value}}</span>
                 </li>
             </ul>
         </div>

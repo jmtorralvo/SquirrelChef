@@ -3,6 +3,7 @@
         "name": "Sardina Foo",
         "id" : "0001",
         "utils": "",
+        "rating"    :   6,
         "ingredients": [{
             "label": "sardina",
             "importance": 10
@@ -19,6 +20,7 @@
         "name": "Boquerones en vinagre",
         "id" : "0002",
         "utils": "",
+        "rating"    :   9,
         "ingredients": [{
             "label": "boquerón",
             "importance": 10
@@ -41,6 +43,7 @@
         "name": "Cangrejos de la abuela",
         "id" : "0003",
         "utils": "",
+        "rating"    :   3,
         "ingredients": [{
             "label": "cangrejo río",
             "importance": 10
@@ -72,6 +75,7 @@
         "name": "Cazón en Adobo",
         "id" : "0004",
         "utils": "",
+        "rating"    :   7,
         "ingredients": [{
             "label": "cazón",
             "importance": 10
@@ -107,6 +111,7 @@
         "name": "Ceviche de Lubina",
         "id" : "0005",
         "utils": "",
+        "rating"    :   8,
         "ingredients": [{
             "label": "lubina",
             "importance": 10

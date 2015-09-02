@@ -11,6 +11,7 @@
         "RECIPES": "Recetas"
     },
     "home": {
+    	"NO_MATCH": "No se ha encontrado ninguna receta",
         "MATCHED_RECIPES": "recetas coincidentes",
         "GEN_RECIPE" : "Generar Receta",
         "RESET_SEARCH" : "Limpiar búsqueda",

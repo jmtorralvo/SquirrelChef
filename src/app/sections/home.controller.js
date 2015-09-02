@@ -2,7 +2,7 @@
 
 class HomeCtrl {
 
-    constructor($scope, IngredientsFctr, RecipesFctr, ConstantSrv) {
+    constructor($scope, IngredientsFctr, RecipesFctr, $translate, ingredients, posibleRecipes, recipes) {
 
         var vm = this;
 
@@ -10,10 +10,11 @@ class HomeCtrl {
         vm.generateRecipe = generateRecipe;
         vm.resetAll = resetAll;
         vm.setAlert = setAlert;
+        vm.clearAlert = clearAlert;
 
-        vm.ingredients = IngredientsFctr.getAllIngredients();
-        vm.recipes = RecipesFctr.getAllRecipes();
-        vm.posiblesRecipes = RecipesFctr.getMatchedRecipes();
+        vm.ingredients = ingredients;
+        vm.recipes = recipes;
+        vm.posiblesRecipes = posibleRecipes;
         vm.selectedIngredients = IngredientsFctr.getIngredientsSelected();
         $scope.searchText;
 
@@ -32,7 +33,10 @@ class HomeCtrl {
         function generateRecipe() {
             vm.posiblesRecipes = RecipesFctr.lookForRecipe(vm.selectedIngredients);
             if (vm.posiblesRecipes.length === 0) {
-                vm.setAlert(ConstantSrv.getConst('msg', 'noRecipes'), 'info', true)
+                $translate('home.NO_MATCH')
+                .then(function(resp){
+                    vm.setAlert(resp, 'info', true)
+                });  
             } else {
                 for (var i = 0; i < vm.posiblesRecipes.length; i++) {
                     vm.posiblesRecipes[i].tooltipTxt = '';
@@ -50,6 +54,7 @@ class HomeCtrl {
             $scope.searchText = '';
             RecipesFctr.deleteMatchedRecipes();
             vm.posiblesRecipes = RecipesFctr.getMatchedRecipes();
+            vm.clearAlert();
 
             for (var i = 0; i < vm.ingredients.length; i++) {
                 vm.ingredients[i].selected = false;
@@ -64,13 +69,18 @@ class HomeCtrl {
             };
         };
 
+        function clearAlert(){
+            vm.alertModel = {
+                msg: ''
+            };
+        };
+
         $scope.$on('$destroy', function() {
-            //vm.resetAll();
             IngredientsFctr.updateSelectedIngredientsArray(vm.selectedIngredients);
         });
     }
 }
 
-HomeCtrl.$inject = ['$scope', 'IngredientsFctr', 'RecipesFctr', 'ConstantSrv'];
+HomeCtrl.$inject = ['$scope', 'IngredientsFctr', 'RecipesFctr', '$translate', 'ingredients','posibleRecipes', 'recipes'];
 
 export default HomeCtrl;

@@ -7,10 +7,6 @@ class ConstantSrv {
             id: 'baseUrl',
             str: 'http loquesea'
         }];
-         this.msg = [{
-            id: 'noRecipes',
-            str: 'No se ha encontrado ninguna receta.'
-        }]
     };
 
     getConst(dir, id) {
