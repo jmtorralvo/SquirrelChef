@@ -63,6 +63,7 @@ angular.module('squirrelChef', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize
         })
         .state('main.recipes', {
             url: '/recipes/:nam',
+            params : {nam:'', selected:[]},
             templateUrl: 'app/sections/recipes.html',
             controller: 'RecipesCtrl',
             controllerAs: 'recipesCtrl'

@@ -14,10 +14,19 @@
             <ul class="recipes-list">
                 <li class="recipe-detail" ng-repeat="rec in recipesCtrl.recipes | filter: { name: recipesCtrl.searchRecipe.txt }">
                     <h3 class="recipe-title">{{rec.name}}</h3>
-                    <h5>{{ 'commons.INGREDIENTS' | translate }}:</h5>
+                    <div ng-if="recipesCtrl.anyIngSelected.length > 0">
+                        <h5>{{ 'commons.INGREDIENTS' | translate }}:</h5>
+                        <ul>
+                            <li ng-repeat="ing in rec.ingredients">
+                                <span ng-class="recipesCtrl.getIngStyle(ing) ? '' : 'tachado'">{{ing.label}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <h5>{{ 'recipes.AMOUNTS' | translate }}:</h5>
                     <ul>
-                        <li ng-repeat="ing in rec.ingredientsdetail">
-                            {{ing}}
+                        <li ng-repeat="ingD in rec.ingredientsdetail">
+                            {{ingD}}
                         </li>
                     </ul>
                     <h5>{{ 'recipes.STEPS' | translate }}:</h5>

@@ -4,18 +4,19 @@ class HomeCtrl {
 
     constructor($scope, IngredientsFctr, RecipesFctr, $translate, ingredients, posibleRecipes, recipes) {
 
-        var vm = this;
-
+        const vm = this;
         vm.toggleAddingIngredient = toggleAddingIngredient;
         vm.generateRecipe = generateRecipe;
         vm.resetAll = resetAll;
         vm.setAlert = setAlert;
         vm.clearAlert = clearAlert;
+        vm.changePercentToMatch = changePercentToMatch;
 
         vm.ingredients = ingredients;
         vm.recipes = recipes;
         vm.posiblesRecipes = posibleRecipes;
         vm.selectedIngredients = IngredientsFctr.getIngredientsSelected();
+        vm.percentToMatch = RecipesFctr.getPercentToMatch();
         $scope.searchText;
 
 
@@ -41,7 +42,9 @@ class HomeCtrl {
                 for (var i = 0; i < vm.posiblesRecipes.length; i++) {
                     vm.posiblesRecipes[i].tooltipTxt = '';
                     for (var j = 0; j < vm.posiblesRecipes[i].ingredients.length; j++) {
-                        let tempTxt = (j < vm.posiblesRecipes[i].ingredients.length - 1) ? vm.posiblesRecipes[i].ingredients[j].label + ', ' : vm.posiblesRecipes[i].ingredients[j].label + '.';
+                        let tempTxt = (j < vm.posiblesRecipes[i].ingredients.length - 1) 
+                                        ? vm.posiblesRecipes[i].ingredients[j].label + ', ' 
+                                        : vm.posiblesRecipes[i].ingredients[j].label + '.';
                         vm.posiblesRecipes[i].tooltipTxt += tempTxt;
                     };
                 };
@@ -75,7 +78,14 @@ class HomeCtrl {
             };
         };
 
-        $scope.$on('$destroy', function() {
+        function changePercentToMatch(){
+            RecipesFctr.changePercentToMatch(vm.percentToMatch);
+            if(vm.selectedIngredients.length > 0){
+                vm.generateRecipe();
+            }  
+        };
+
+        $scope.$on('$destroy', function(newVal, oldVal) {
             IngredientsFctr.updateSelectedIngredientsArray(vm.selectedIngredients);
         });
     }

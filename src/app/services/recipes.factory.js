@@ -84,7 +84,11 @@ class RecipesFctr {
 
     deleteMatchedRecipes(){
         this.matchedRecipes = [];
-    }
+    };
+
+    getPercentToMatch(){
+        return this.limitPercentToMatch;
+    };
 
     changePercentToMatch(num) {
         if (num > 0 && num < 100) {

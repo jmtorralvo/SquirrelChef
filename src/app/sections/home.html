@@ -6,15 +6,16 @@
         <ul ng-if="homeCtrl.posiblesRecipes.length > 0">
             <li class="result-recipe" ng-repeat="rec in homeCtrl.posiblesRecipes">
                 <div class="tit-pos-recipe col-xs-4" ng-class="rec.clase" tooltip="{{rec.tooltipTxt}}" tooltip-placement="bottom">
-                    <p><a ui-sref="main.recipes({nam :rec.name})">{{rec.name}} - {{rec.score}}</a></p>
+                    <p><a ui-sref="main.recipes({nam :rec.name, selected:homeCtrl.selectedIngredients})">{{rec.name}} - {{rec.score}}</a></p>
                 </div>
             </li>
         </ul>
     </div>
     <div class="col-xs-4">
-        <h4>lslalasl</h4>
-        <input type="range" ng-model="time" min="100" max="2000" step="25" style="width: 140px" class="ng-valid ng-dirty">
-        <!-- <div range-slider min="0" max="10000" model-max="demo6.valueA" pin-handle="min"></div> -->
+        <h4>{{homeCtrl.percentToMatch}}%</h4>
+        <input type="range" ng-model="homeCtrl.percentToMatch" 
+                min="0" max="100" step="1"
+                ng-change="homeCtrl.changePercentToMatch();">
     </div>
 </div>
 <div class="row margin-bottom-lg">

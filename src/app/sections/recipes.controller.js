@@ -3,11 +3,11 @@
 class RecipesCtrl {
 
     constructor($stateParams, $scope, RecipesFctr) {
-
-        var vm = this;
+        const vm = this;
         let tempTxt = ($stateParams.nam !== '') ? $stateParams.nam : '';
         vm.maxRating = 10;
         vm.ratingReadOnly = false;
+        vm.anyIngSelected = $stateParams.selected;
         vm.recipes = RecipesFctr.getAllRecipes();
         vm.searchRecipe = {
             txt: tempTxt
@@ -15,10 +15,22 @@ class RecipesCtrl {
         vm.clearSearch = clearSearch;
         vm.hoveringOver = hoveringOver;
         vm.changeRating = changeRating;
+        vm.getIngStyle = getIngStyle;
 
+
+        function getIngStyle(ing){
+            var match = false;
+            for (var i = 0; i < vm.anyIngSelected.length; i++) {
+                if(vm.anyIngSelected[i].name === ing.label){
+                    match = true;
+                }
+            };
+            return match;
+        };
 
         function clearSearch() {
             vm.searchRecipe.txt = '';
+            //vm.anyIngSelected = [];
         };
 
         function hoveringOver(value) {
