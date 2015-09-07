@@ -1,67 +1,86 @@
 @import "main";
+.ingredient-wrap {
+    position: relative;
+    min-width: 100px;
+    min-height: 30px;
+    cursor: pointer;
+    margin-bottom: 6px;
+    list-style: none;
+    .ingredient {
+        height: 40px;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        background-color: #eee;
+        overflow: hidden;
+    }
+    .ingredient-selected {
+        background-color: $color3;
+    }
+    p.ing-label {
+        @include transition(all, 0.3s, ease-in-out);
+        position: relative;
+        bottom: -5px;
+        text-align: center;
+        line-height: 30px;
+        display: block;
+    }
+    p.ing-label-normal {}
+    p.ing-label-hover {}
+    span.ico {
+        height: 30px;
+        width: 30px;
+        background-color: red;
+    }
+    .selected {
+        background-color: $color4;
+    }
+    &.ing-noSelected:hover {
+        p.ing-label-normal,
+        p.ing-label-hover {
+            bottom: 37px;
+        }
+    }
+    &.ing-selected:hover {
+        p.ing-label-normal,
+        p.ing-label-hover {
+            bottom: 37px;
+        }
+    }
+}
 
-.ingredient-wrap{
-	position: relative;
-	min-width: 100px;
-	min-height:30px;
-	cursor: pointer;
-	margin-bottom: 6px;
-	list-style: none;   
-
-	.ingredient{
-		height: 40px; 
-		top: 10%; 
-		left: 10%;
-		width: 80%;
-		background-color: #eee;
-		overflow: hidden;
-	}
-	.ingredient-selected{
-		background-color: $color3;
-	}
-	p.ing-label{
-		@include transition(all, 0.3s, ease-in-out); 
-		position: relative;
-		bottom: -5px;
-		text-align: center;
-		line-height: 30px;
-		display: block; 
-	}
-	p.ing-label-normal{
-	}
-	p.ing-label-hover{
-	}
-	span.ico{
-		height: 30px;
-		width: 30px;
-		background-color: red;
-	}
-	.selected{
-		background-color: $color4;
-	}
-	&.ing-noSelected:hover{
-		p.ing-label-normal, p.ing-label-hover{
-			bottom: 37px;
-		}
-	}
-	&.ing-selected:hover{
-		p.ing-label-normal, p.ing-label-hover{
-			bottom: 37px;
-		}
-	}
-} 
-
-.result-recipe{
-	.low{
-		color: red;
-	}
-	.medium{
-		color: yellow;
-	}
-	.hight{
-		color: blue;
-	}
-	.total{
-		color: green;
-	}
+.result-recipe {
+    list-style: none;
+    .tit-pos-recipe {
+        font-size: 18px;
+        cursor: pointer;
+        opacity: 0.75;
+        @include transition(opacity, 0.25s, ease-in-out);
+        p.low {
+            a {
+                color: $color3;
+            }
+        }
+        p.medium {
+            a {
+                color: $color4;
+            }
+        }
+        p.hight {
+            a {
+                color: $color2;
+            }
+        }
+        p.total {
+            a {
+                color: $color2;
+            }
+        }
+        .per{
+        	font-size:14px;
+        }
+    }
+    .tit-pos-recipe:hover {
+        opacity: 1;
+    }
 }

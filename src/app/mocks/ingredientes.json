@@ -157,12 +157,6 @@
 			"icon"	:	"fruitIco"
 		},
 		{
-			"name" : "naranja",
-			"type" : "fruit",
-			"importance"	:	2,
-			"icon"	:	"fruitIco"
-		},
-		{
 			"name" : "aceite",
 			"type" : "sauce",
 			"importance"	:	4,
@@ -179,6 +173,12 @@
 			"type" : "main",
 			"importance"	:	2,
 			"icon"	:	"eggIco"
+		},
+		{
+			"name" : "ajo",
+			"type" : "spice",
+			"importance"	:	4,
+			"icon"	:	"spiceIco"
 		}
 	]
 }

@@ -5,8 +5,10 @@
         <div sc-alert ng-model="homeCtrl.alertModel">sc-Alert</div>
         <ul ng-if="homeCtrl.posiblesRecipes.length > 0">
             <li class="result-recipe" ng-repeat="rec in homeCtrl.posiblesRecipes">
-                <div class="tit-pos-recipe col-xs-4" ng-class="rec.clase" tooltip="{{rec.tooltipTxt}}" tooltip-placement="bottom">
-                    <p><a ui-sref="main.recipes({nam :rec.name, selected:homeCtrl.selectedIngredients})">{{rec.name}} - {{rec.score}}</a></p>
+                <div class="tit-pos-recipe col-xs-6" tooltip="{{rec.tooltipTxt}}" tooltip-placement="bottom">
+                    <p ng-class="rec.clase">
+                        <a ui-sref="main.recipes({nam :rec.name, selected:homeCtrl.selectedIngredients})">{{rec.name}} - {{rec.score}}% </br><span class="per">{{ 'home.PER_COINCIDENCE' | translate}}</span></a>
+                    </p>
                 </div>
             </li>
         </ul>

@@ -20,9 +20,9 @@ class RecipesFctr {
                 notMainIng = false,
                 per = (c, lim) => Math.round((c * 100) / lim),
                 clase = x => {
-                    if (x<65){
+                    if (x<55){
                         return 'low';
-                    }if(x>85){
+                    }if(x>75){
                         return 'medium';
                     }if(x<99){
                         return 'hight';

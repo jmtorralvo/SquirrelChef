@@ -11,6 +11,7 @@ class HomeCtrl {
         vm.setAlert = setAlert;
         vm.clearAlert = clearAlert;
         vm.changePercentToMatch = changePercentToMatch;
+        vm.getScoreClass = getScoreClass;
 
         vm.ingredients = ingredients;
         vm.recipes = recipes;
@@ -83,6 +84,11 @@ class HomeCtrl {
             if(vm.selectedIngredients.length > 0){
                 vm.generateRecipe();
             }  
+        };
+
+        function getScoreClass(num){
+            num = Math.floor(Number(num)/10);
+            return String(num+"-score")
         };
 
         $scope.$on('$destroy', function(newVal, oldVal) {

@@ -15,7 +15,8 @@
         "MATCHED_RECIPES": "recetas coincidentes",
         "GEN_RECIPE" : "Generar Receta",
         "RESET_SEARCH" : "Limpiar búsqueda",
-        "INGREDIENTS_SELECTED" : "Ingredientes seleccionados"
+        "INGREDIENTS_SELECTED" : "Ingredientes seleccionados",
+        "PER_COINCIDENCE"   :   "de ingredientes coincidentes"
     },
     "recipes" : {
     	"STEPS" : "Pasos",
