@@ -1,20 +1,22 @@
 <h1 class="tit-sec">{{ 'nav.HOME' | translate }}</h1>
 <div class="row margin-bottom-xxl">
     <div class="col-xs-8">
-        <h4>{{ 'home.MATCHED_RECIPES' | translate}}:</h4>
-        <div sc-alert ng-model="homeCtrl.alertModel">sc-Alert</div>
-        <ul ng-if="homeCtrl.posiblesRecipes.length > 0">
-            <li class="result-recipe" ng-repeat="rec in homeCtrl.posiblesRecipes">
-                <div class="tit-pos-recipe col-xs-6" tooltip="{{rec.tooltipTxt}}" tooltip-placement="bottom">
-                    <p ng-class="rec.clase">
-                        <a ui-sref="main.recipes({nam :rec.name, selected:homeCtrl.selectedIngredients})">{{rec.name}} - {{rec.score}}% </br><span class="per">{{ 'home.PER_COINCIDENCE' | translate}}</span></a>
-                    </p>
-                </div>
-            </li>
-        </ul>
+        <div class="matched-recipes-container">
+            <h4>{{ 'home.MATCHED_RECIPES' | translate}}:</h4>
+            <div sc-alert ng-model="homeCtrl.alertModel">sc-Alert</div>
+            <ul ng-if="homeCtrl.posiblesRecipes.length > 0">
+                <li class="result-recipe" ng-repeat="rec in homeCtrl.posiblesRecipes">
+                    <div class="tit-pos-recipe col-xs-6" tooltip="{{rec.tooltipTxt}}" tooltip-placement="bottom">
+                        <p ng-class="rec.clase">
+                            <a ui-sref="main.recipes({nam :rec.name, selected:homeCtrl.selectedIngredients})">{{rec.name}} - {{rec.score}}% </br><span class="per">{{ 'home.PER_COINCIDENCE' | translate}}</span></a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>    
     </div>
     <div class="col-xs-4">
-        <h4>{{homeCtrl.percentToMatch}}%</h4>
+        <p class="match-text-wrap"><span class="per">{{homeCtrl.percentToMatch}}%</span><span class="disclaimer"> de coincidencia</span></p>
         <input type="range" ng-model="homeCtrl.percentToMatch" 
                 min="0" max="100" step="1"
                 ng-change="homeCtrl.changePercentToMatch();">

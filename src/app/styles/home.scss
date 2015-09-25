@@ -84,3 +84,22 @@
         opacity: 1;
     }
 }
+
+.match-text-wrap
+{
+    .per{
+        display: inline-block;
+        font-size: 22px;
+        margin-right: 8px;
+    }
+    .disclaimer{
+
+    }
+}
+
+.matched-recipes-container{
+    padding: 15px;
+    border: 1px solid red;
+    overflow: auto;
+     @include transition(all, 0.5s, ease-in-out);
+}
