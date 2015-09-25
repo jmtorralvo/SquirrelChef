@@ -1,0 +1,5 @@
+@import 'mixins';
+
+@include font-face(Euphorigenic, $pathFonts + euphorigenic/euphorigenic-webfont, 500, normal, eot woff2 woff);
+@include font-face(Comfortaa, $pathFonts + comfortaa/comfortaa-regular-webfont, 500, normal, eot woff2 woff);
+@include font-face(ComfortaaBold, $pathFonts + comfortaa/comfortaa-bold-webfont, 500, normal, eot woff2 woff);

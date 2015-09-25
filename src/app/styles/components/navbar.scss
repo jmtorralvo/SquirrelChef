@@ -1,0 +1,42 @@
+.navbar {
+    border: none;
+    background-color: $mainColor;
+    .container {
+        ul.navbar-nav {
+            li {
+                height: 70px;
+            }
+            li.logo {
+                width: 100px;
+                margin-right: 20px;
+                background-image: url($basePath+"/images/logoArdilla.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            li.itemNav {
+                &.activo{
+                    background-color: $mainColorComp;
+                    a{
+                        color: $color2;
+                    }
+                }
+                a {
+                    padding-left: 18px;
+                    padding-right: 18px;
+                    font-family: 'Comfortaa';
+                    font-size: 17px;
+                    color: white;
+                    line-height: 37px;
+                    height: 100%;
+                    &.active,
+                    &:focus,
+                    &:hover {
+                        background-color: $mainColorComp;
+                        color: $color2;
+                    }
+                }
+            }
+        }
+    }
+}
